@@ -9,6 +9,7 @@ from flask import Flask, redirect, url_for
 # from blog.controllers import main
 # from blog.extensions import bcrypt
 #
+from main.msyb.controllers.HelloController import hello_blueprint
 
 def create_app(object_name):
     """Create the app instance via 'Factory Method'"""
@@ -42,12 +43,12 @@ def create_app(object_name):
 
     @app.route('/')
     def index():
-        return redirect(url_for('blog.home'))
+        return redirect(url_for('hello.hello'))
 
 
     # 将新建的蓝图对象 blog_blueprint 注册到 app 中
     # 每次新建一个蓝图都需要在这里添加一个
-    # app.register_blueprint(blogs.blog_blueprint)
+    app.register_blueprint(hello_blueprint)
     # app.register_blueprint(main.main_blueprint)
 
     # if __name__ == '__main__':
