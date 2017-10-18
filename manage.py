@@ -4,7 +4,6 @@
 import os
 
 # from flask_script import Manager, Server
-from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext.script import Manager, Server
 
 from __init__ import create_app
