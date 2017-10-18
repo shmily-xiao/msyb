@@ -8,7 +8,7 @@
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 {% for item in data %}
-    <div id="main#{{ item.index }}" style="width: 600px;height:400px;"></div>
+    <div id="main#{{ loop.index0 }}" style="width: 600px;height:400px;"></div>
 {% endfor %}
 <script type="text/javascript">
 

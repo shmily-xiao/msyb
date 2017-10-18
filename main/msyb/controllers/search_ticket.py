@@ -180,7 +180,7 @@ class SearchTicket(object):
 
         url = host + query
 
-        time.sleep(1)
+        time.sleep(0.5)
         response = requests.get(url, verify=False).json()
 
         # return response
