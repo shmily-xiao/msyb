@@ -30,9 +30,9 @@ def ticket():
     from search_ticket import SearchTicket
     ticket = SearchTicket()
     data = ticket.do()
+
+    print data
     # return response(data)
     # print path.join(path.pardir, 'templates', 'webapp', 'main')
-
-
     return render_template('chepiao.html',
                            data=data)

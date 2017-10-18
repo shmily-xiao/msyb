@@ -43,7 +43,7 @@ SEAT_TYPE_MAP = {
 
 class SearchTicket(object):
     def do(self):
-        date_time = "2017-10-19"
+        date_time = "2017-10-20"
 
         params = {"leftTicketDTO.train_date": date_time,
                   "leftTicketDTO.from_station": "BJP",
@@ -180,7 +180,7 @@ class SearchTicket(object):
 
         url = host + query
 
-        time.sleep(0.5)
+        # time.sleep(0.5)
         response = requests.get(url, verify=False).json()
 
         # return response
@@ -250,7 +250,7 @@ class SearchTicket(object):
         url = url + query
         print url
 
-        time.sleep(0.5)
+        # time.sleep(0.5)
         response = requests.get(url, verify=False).json()
 
         # response = {u'status': True, u'validateMessagesShowId': u'_validatorMessage', u'messages': [],

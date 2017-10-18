@@ -8,18 +8,20 @@
 <body>
 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 {% for item in data %}
-    <div id="main#{{ loop.index0 }}" style="width: 600px;height:400px;"></div>
+    <div id="main_{{ loop.index0 }}" style="width: 600px;height:400px;"></div>
 {% endfor %}
 <script type="text/javascript">
 
     var json = {{ data | tojson | safe }};
 
-    for (var item in json){
-        show_line(item.locations_name, item.indexOf())
+
+    for (var i=0;i< json.length; i++){
+        var item = json[i];
+        show_line(item.locations_name, i);
     }
     function show_line(locations_name, index) {
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main#'+index));
+        var myChart = echarts.init(document.getElementById('main_'+index));
 
         // 指定图表的配置项和数据
 
