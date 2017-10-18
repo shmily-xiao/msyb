@@ -250,7 +250,7 @@ class SearchTicket(object):
         url = url + query
         print url
 
-        time.sleep(1)
+        time.sleep(0.5)
         response = requests.get(url, verify=False).json()
 
         # response = {u'status': True, u'validateMessagesShowId': u'_validatorMessage', u'messages': [],
